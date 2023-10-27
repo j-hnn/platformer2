@@ -69,14 +69,13 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8qqmd"]
-radius = 9.0
 height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo844"]
-size = Vector2(19, 26)
+size = Vector2(24, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmrd7"]
-size = Vector2(16, 7)
+size = Vector2(15, 7)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_gbhmw")
@@ -95,7 +94,7 @@ shape = SubResource("CapsuleShape2D_8qqmd")
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-0.5, -20)
+position = Vector2(-1, -20)
 shape = SubResource("RectangleShape2D_mo844")
 
 [node name="feet" type="Area2D" parent="."]
@@ -103,7 +102,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="feet"]
-position = Vector2(0, -5)
+position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_hmrd7")
 
 [node name="death_timer" type="Timer" parent="."]

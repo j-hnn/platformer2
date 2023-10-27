@@ -68,10 +68,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qdnpt"]
-size = Vector2(14, 13)
+size = Vector2(16, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkkmu"]
-size = Vector2(14, 3)
+size = Vector2(16, 3)
 
 [node name="big_toad" type="CharacterBody2D"]
 script = ExtResource("1_pplc4")

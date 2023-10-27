@@ -66,7 +66,14 @@ func die():
 	is_dying = true
 	animated_sprite_2d.play("die")
 	await move_payer_up_and_down()
-	get_tree().reload_current_scene()
+	Global.player_lives -= 1
+	
+	if Global.player_lives > 0:
+		print("Reloading Scene")
+		get_tree().reload_current_scene()
+	else:
+		queue_free()
+		#get_tree().change_scene_to_file("res://gameover.tscn")
 
 func move_payer_up_and_down():
 	var start_position = position

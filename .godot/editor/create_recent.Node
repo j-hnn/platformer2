@@ -1,9 +1,9 @@
+Label
 Camera2D
 CollisionShape2D
 Area2D
 ColorRect
 TileMap
-Label
 CanvasLayer
 CanvasGroup
 AudioStreamPlayer2D
