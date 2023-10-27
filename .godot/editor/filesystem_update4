@@ -12,3 +12,5 @@ res://start.gd
 res://start.tscn
 res://gameover.gd
 res://gameover.tscn
+res://questionblock.gd
+res://questionblock.tscn
