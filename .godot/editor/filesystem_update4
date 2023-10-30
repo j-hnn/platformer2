@@ -14,3 +14,4 @@ res://gameover.tscn
 res://questionblock.tscn
 res://global.gd
 res://questionblock.gd
+res://player.gd
