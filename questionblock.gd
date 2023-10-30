@@ -8,11 +8,12 @@ var original_position: Vector2
 func _ready():
 	original_position = position
 	
-
+# signal handler for on_body_entered
 func _on_body_entered(body):
 	if body.is_in_group("Player") and state == State.UNBUMPED:
 		bump_block()
 		
+	# logic for bumping block
 func bump_block():
 	state = State.BUMPED
 	$Sprite2D.frame = 1
@@ -24,8 +25,10 @@ func bump_block():
 	
 	
 	
-	func bump_upwards():
+# function to move block upwards
+func bump_upwards():
 		position.y -= 10
 		
-	func return_to_original_position():
+# function to move block back to original position
+func return_to_original_position():
 		position = original_position

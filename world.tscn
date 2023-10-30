@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cbbqm7t4blhst"]
+[gd_scene load_steps=17 format=3 uid="uid://cbbqm7t4blhst"]
 
 [ext_resource type="PackedScene" uid="uid://cq3r182jkg4qc" path="res://player.tscn" id="1_kgsbw"]
 [ext_resource type="Script" path="res://world.gd" id="1_kpufw"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dpamlkn3smx8d" path="res://big_toad.tscn" id="5_2rd5i"]
 [ext_resource type="PackedScene" uid="uid://cjvfn0lec2p03" path="res://coin.tscn" id="6_blaet"]
 [ext_resource type="PackedScene" uid="uid://h8dlfq2h0ka7" path="res://coin_gui.tscn" id="8_bk00f"]
+[ext_resource type="PackedScene" uid="uid://pq020r8pih72" path="res://questionblock.tscn" id="10_qy6os"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jq5l"]
 texture = ExtResource("1_wghij")
@@ -153,6 +154,12 @@ shape = SubResource("CircleShape2D_01w7e")
 
 [node name="toad" parent="." instance=ExtResource("4_lx65w")]
 position = Vector2(296, 528)
+
+[node name="questionblock" parent="." instance=ExtResource("10_qy6os")]
+position = Vector2(70, 474)
+
+[node name="questionblock2" parent="." instance=ExtResource("10_qy6os")]
+position = Vector2(997, 456)
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]

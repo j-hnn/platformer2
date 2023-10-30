@@ -1,3 +1,7 @@
+res://character_body_2d.gd
+res://character_body_2d.tscn
+res://beer.tscn
+res://beer.gd
 res://world.tscn
 res://player.tscn
 res://toad.tscn
@@ -5,12 +9,8 @@ res://big_toad.tscn
 res://coin.tscn
 res://coin_gui.tscn
 res://underworld.tscn
-res://global.gd
-res://player.gd
-res://coin_gui.gd
-res://start.gd
 res://start.tscn
-res://gameover.gd
 res://gameover.tscn
-res://questionblock.gd
 res://questionblock.tscn
+res://global.gd
+res://questionblock.gd
