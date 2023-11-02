@@ -12,6 +12,8 @@ func _process(delta):
 
 
 func _on_start_pressed():
+	Global.total_coins = 0
+	Global.player_lives =  3
 	get_tree().change_scene_to_file("res://world.tscn")
 
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bow26ftlgows0"]
+[gd_scene load_steps=19 format=3 uid="uid://bow26ftlgows0"]
 
 [ext_resource type="Texture2D" uid="uid://b48jebbxw3m7y" path="res://lvl2-block.png" id="1_gihre"]
 [ext_resource type="Script" path="res://underworld.gd" id="1_ltby5"]
 [ext_resource type="Texture2D" uid="uid://tsg4jpk5a5yh" path="res://lvl2-brick.png" id="2_kdru8"]
 [ext_resource type="PackedScene" uid="uid://cq3r182jkg4qc" path="res://player.tscn" id="3_mevuq"]
+[ext_resource type="Texture2D" uid="uid://dyuaxtew4c8ld" path="res://flagpole.png" id="4_qugrs"]
 [ext_resource type="PackedScene" uid="uid://dpamlkn3smx8d" path="res://big_toad.tscn" id="5_lwbrm"]
 [ext_resource type="PackedScene" uid="uid://cjvfn0lec2p03" path="res://coin.tscn" id="6_sfuwm"]
 [ext_resource type="PackedScene" uid="uid://cepjp7du3skow" path="res://toad.tscn" id="7_jf6qm"]
@@ -24,19 +25,31 @@ texture = ExtResource("2_kdru8")
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g5nb6"]
+texture = ExtResource("4_qugrs")
+0:0/size_in_atlas = Vector2i(1, 11)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 72.125, 8, 71.875, 8.125, 88.375, -8, 88.75)
+
 [sub_resource type="TileSet" id="TileSet_7rbkj"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v15od")
 sources/1 = SubResource("TileSetAtlasSource_qdva2")
+sources/3 = SubResource("TileSetAtlasSource_g5nb6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnoc6"]
-size = Vector2(698, 29)
+size = Vector2(1690, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm35b"]
 size = Vector2(707, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ie3ov"]
-size = Vector2(320.005, 27)
+size = Vector2(350.679, 27)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34v15"]
+radius = 14.3178
 
 [node name="underworld" type="Node2D"]
 script = ExtResource("1_ltby5")
@@ -44,7 +57,7 @@ script = ExtResource("1_ltby5")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7rbkj")
 format = 2
-layer_0/tile_data = PackedInt32Array(2621439, 0, 0, 2686975, 0, 0, 2555904, 0, 0, 2621440, 0, 0, 2555905, 0, 0, 2621441, 0, 0, 2555906, 0, 0, 2621442, 0, 0, 2555907, 0, 0, 2621443, 0, 0, 2555908, 0, 0, 2621444, 0, 0, 2555909, 0, 0, 2621445, 0, 0, 2555910, 0, 0, 2621446, 0, 0, 2555911, 0, 0, 2621447, 0, 0, 2555912, 0, 0, 2621448, 0, 0, 2555913, 0, 0, 2621449, 0, 0, 2555914, 0, 0, 2621450, 0, 0, 2555915, 0, 0, 2621451, 0, 0, 1245183, 1, 0, 1310719, 1, 0, 1376255, 1, 0, 1441791, 1, 0, 1507327, 1, 0, 1572863, 1, 0, 1638399, 1, 0, 1703935, 1, 0, 1769471, 1, 0, 1835007, 1, 0, 1900543, 1, 0, 1966079, 1, 0, 2031615, 1, 0, 2097151, 1, 0, 2162687, 1, 0, 2228223, 1, 0, 2293759, 1, 0, 2359295, 1, 0, 2424831, 1, 0, 2490367, 1, 0, 2555903, 1, 0, 2490376, 1, 0, 2490377, 1, 0, 2490378, 1, 0, 2490379, 1, 0, 2293773, 1, 0, 2293774, 1, 0, 2293775, 1, 0, 2293776, 1, 0, 2097170, 1, 0, 2097171, 1, 0, 2097172, 1, 0, 2097173, 1, 0, 1900567, 1, 0, 1900568, 1, 0, 1900569, 1, 0, 1900570, 1, 0, 1703964, 0, 0, 1769500, 0, 0, 1703965, 0, 0, 1769501, 0, 0, 1703966, 0, 0, 1769502, 0, 0, 1703967, 0, 0, 1769503, 0, 0, 1703968, 0, 0, 1769504, 0, 0, 1703969, 0, 0, 1769505, 0, 0, 1703970, 0, 0, 1769506, 0, 0, 1703971, 0, 0, 1769507, 0, 0, 1703972, 0, 0, 1769508, 0, 0, 1703973, 0, 0, 1769509, 0, 0, 1703974, 0, 0, 1769510, 0, 0, 1703975, 0, 0, 1769511, 0, 0, 1703994, 0, 0, 1769530, 0, 0, 1703995, 0, 0, 1769531, 0, 0, 1703996, 0, 0, 1769532, 0, 0, 1703997, 0, 0, 1769533, 0, 0, 1638436, 1, 0, 1638437, 1, 0, 1572900, 1, 0, 1572901, 1, 0, 1638438, 1, 0, 1572902, 1, 0, 1507366, 1, 0, 1441830, 1, 0, 1572903, 1, 0, 1638439, 1, 0, 1507367, 1, 0, 1441831, 1, 0, 1441834, 1, 0, 1441835, 1, 0, 1441838, 1, 0, 1441839, 1, 0, 1441842, 1, 0, 1441843, 1, 0, 1441846, 1, 0, 1441847, 1, 0, 1441850, 1, 0, 1441851, 1, 0, 1507386, 1, 0, 1507387, 1, 0, 1572922, 1, 0, 1572923, 1, 0, 1638458, 1, 0, 1638459, 1, 0, 1572924, 1, 0, 1572925, 1, 0, 1638461, 1, 0, 1638460, 1, 0, 1703998, 0, 0, 1769534, 0, 0, 1703999, 0, 0, 1769535, 0, 0, 1704000, 0, 0, 1769536, 0, 0, 1704001, 0, 0, 1769537, 0, 0, 1704002, 0, 0, 1769538, 0, 0, 1704003, 0, 0, 1769539, 0, 0, 1704004, 0, 0, 1769540, 0, 0, 1704005, 0, 0, 1769541, 0, 0, 1704006, 0, 0, 1769542, 0, 0, 1704007, 0, 0, 1769543, 0, 0, 1704008, 0, 0, 1769544, 0, 0, 1704009, 0, 0, 1769545, 0, 0, 1704010, 0, 0, 1769546, 0, 0, 1704011, 0, 0, 1769547, 0, 0)
+layer_0/tile_data = PackedInt32Array(2621439, 0, 0, 2686975, 0, 0, 2555904, 0, 0, 2621440, 0, 0, 2555905, 0, 0, 2621441, 0, 0, 2555906, 0, 0, 2621442, 0, 0, 2555907, 0, 0, 2621443, 0, 0, 2555908, 0, 0, 2621444, 0, 0, 2555909, 0, 0, 2621445, 0, 0, 2555910, 0, 0, 2621446, 0, 0, 2555911, 0, 0, 2621447, 0, 0, 2555912, 0, 0, 2621448, 0, 0, 2555913, 0, 0, 2621449, 0, 0, 2555914, 0, 0, 2621450, 0, 0, 2555915, 0, 0, 2621451, 0, 0, 1245183, 1, 0, 1310719, 1, 0, 1376255, 1, 0, 1441791, 1, 0, 1507327, 1, 0, 1572863, 1, 0, 1638399, 1, 0, 1703935, 1, 0, 1769471, 1, 0, 1835007, 1, 0, 1900543, 1, 0, 1966079, 1, 0, 2031615, 1, 0, 2097151, 1, 0, 2162687, 1, 0, 2228223, 1, 0, 2293759, 1, 0, 2359295, 1, 0, 2424831, 1, 0, 2490367, 1, 0, 2555903, 1, 0, 2490376, 1, 0, 2490377, 1, 0, 2490378, 1, 0, 2490379, 1, 0, 2293773, 1, 0, 2293774, 1, 0, 2293775, 1, 0, 2293776, 1, 0, 2097170, 1, 0, 2097171, 1, 0, 2097172, 1, 0, 2097173, 1, 0, 1900567, 1, 0, 1900568, 1, 0, 1900569, 1, 0, 1900570, 1, 0, 1703964, 0, 0, 1769500, 0, 0, 1703965, 0, 0, 1769501, 0, 0, 1703966, 0, 0, 1769502, 0, 0, 1703967, 0, 0, 1769503, 0, 0, 1703968, 0, 0, 1769504, 0, 0, 1703969, 0, 0, 1769505, 0, 0, 1703970, 0, 0, 1769506, 0, 0, 1703971, 0, 0, 1769507, 0, 0, 1703972, 0, 0, 1769508, 0, 0, 1703973, 0, 0, 1769509, 0, 0, 1703974, 0, 0, 1769510, 0, 0, 1703975, 0, 0, 1769511, 0, 0, 1703994, 0, 0, 1769530, 0, 0, 1703995, 0, 0, 1769531, 0, 0, 1703996, 0, 0, 1769532, 0, 0, 1703997, 0, 0, 1769533, 0, 0, 1638436, 1, 0, 1638437, 1, 0, 1572900, 1, 0, 1572901, 1, 0, 1638438, 1, 0, 1572902, 1, 0, 1507366, 1, 0, 1441830, 1, 0, 1572903, 1, 0, 1638439, 1, 0, 1507367, 1, 0, 1441831, 1, 0, 1441834, 1, 0, 1441835, 1, 0, 1441838, 1, 0, 1441839, 1, 0, 1441842, 1, 0, 1441843, 1, 0, 1441846, 1, 0, 1441847, 1, 0, 1441850, 1, 0, 1441851, 1, 0, 1507386, 1, 0, 1507387, 1, 0, 1572922, 1, 0, 1572923, 1, 0, 1638458, 1, 0, 1638459, 1, 0, 1572924, 1, 0, 1572925, 1, 0, 1638461, 1, 0, 1638460, 1, 0, 1703998, 0, 0, 1769534, 0, 0, 1703999, 0, 0, 1769535, 0, 0, 1704000, 0, 0, 1769536, 0, 0, 1704001, 0, 0, 1769537, 0, 0, 1704002, 0, 0, 1769538, 0, 0, 1704003, 0, 0, 1769539, 0, 0, 1704004, 0, 0, 1769540, 0, 0, 1704005, 0, 0, 1769541, 0, 0, 1704006, 0, 0, 1769542, 0, 0, 1704007, 0, 0, 1769543, 0, 0, 1704008, 0, 0, 1769544, 0, 0, 1769545, 0, 0, 1704010, 0, 0, 1769546, 0, 0, 1704011, 0, 0, 1769547, 0, 0, 1704009, 0, 0, 1310792, 3, 0)
 
 [node name="player" parent="TileMap" instance=ExtResource("3_mevuq")]
 position = Vector2(11, 625)
@@ -69,7 +82,7 @@ color = Color(0.305882, 0.0313726, 0.345098, 1)
 [node name="interaction" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interaction"]
-position = Vector2(323, 652.5)
+position = Vector2(819, 652.5)
 shape = SubResource("RectangleShape2D_jnoc6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="interaction"]
@@ -77,8 +90,9 @@ position = Vector2(898.5, 450)
 shape = SubResource("RectangleShape2D_lm35b")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="interaction"]
-position = Vector2(400.168, 567.116)
+position = Vector2(412.778, 558.386)
 rotation = -0.60552
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ie3ov")
 
 [node name="big_toad4" parent="." instance=ExtResource("5_lwbrm")]
@@ -149,4 +163,11 @@ position = Vector2(518, 355)
 [node name="questionblock3" parent="." instance=ExtResource("9_k8inj")]
 position = Vector2(1047, 366)
 
+[node name="transition" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transition"]
+position = Vector2(1160, 388)
+shape = SubResource("CircleShape2D_34v15")
+
 [connection signal="body_entered" from="interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]
