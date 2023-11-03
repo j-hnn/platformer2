@@ -1,3 +1,6 @@
+AudioStreamPlayer2D
+ColorRect
+TileMap
 Timer
 CollisionShape2D
 Area2D
@@ -5,13 +8,10 @@ AnimatedSprite2D
 AnimationTree
 Sprite2D
 Camera2D
-ColorRect
-TileMap
 CharacterBody2D
 StaticBody2D
 Button
 CanvasLayer
 Label
 CanvasGroup
-AudioStreamPlayer2D
 RayCast2D

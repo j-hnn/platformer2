@@ -35,8 +35,15 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		is_jumping = true
 
-	if Global.current_state == Global.PlayerState.THONG and Input.is_action_just_pressed("fire"):
+	player_direction = Input.get_axis("ui_left", "ui_right")
+	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"): 
+		can_fire_thong = true
+	else:
+		can_fire_thong = false
+	
+	if Global.current_state == Global.PlayerState.THONG and Input.is_action_just_pressed("fire") and can_fire_thong:
 		fire_thong()
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -129,11 +136,13 @@ func fire_thong():
 	var thong = load("res://thong.tscn").instantiate()
 	thong.global_position = Vector2(self.global_position.x, self.global_position.y - 15)
 	
+	player_direction = Input.get_axis("ui_left", "ui_right")
 	thong.set("velocity", Vector2(500 * player_direction, 0))
 	print("thong fired")
 	get_parent().add_child(thong)
 	$AnimatedSprite2D.play("thong_fire")
-	thong_fire_timer.start(0.5)
+	$AudioStreamPlayer2D.play()
+	thong_fire_timer.start(0.25)
 
 func _on_interaction_body_entered(body):
 	if body.is_in_group("Player"):

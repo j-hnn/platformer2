@@ -11,8 +11,7 @@ func _ready():
 func _physics_process(delta):
 	self.position += velocity * delta
 	
-func _on_hit_box_body_entered(body):
+func _on_hitbox_body_entered(body):
 	if body.is_in_group("Enemy"):
 		body.queue_free()
 		queue_free()
-

@@ -161,5 +161,8 @@ position = Vector2(70, 474)
 [node name="questionblock2" parent="." instance=ExtResource("10_qy6os")]
 position = Vector2(997, 456)
 
+[node name="questionblock3" parent="." instance=ExtResource("10_qy6os")]
+position = Vector2(128, 474)
+
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]

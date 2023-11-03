@@ -92,7 +92,6 @@ shape = SubResource("RectangleShape2D_lm35b")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="interaction"]
 position = Vector2(412.778, 558.386)
 rotation = -0.60552
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ie3ov")
 
 [node name="big_toad4" parent="." instance=ExtResource("5_lwbrm")]
