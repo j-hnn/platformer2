@@ -1,7 +1,8 @@
 AudioStreamPlayer2D
+AudioListener2D
+Timer
 ColorRect
 TileMap
-Timer
 CollisionShape2D
 Area2D
 AnimatedSprite2D

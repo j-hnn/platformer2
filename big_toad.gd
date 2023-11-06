@@ -29,6 +29,7 @@ func update_animation():
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("Player"):
 		is_alive = false
+		body.kill_sound()
 		queue_free()
 		
 func flip():

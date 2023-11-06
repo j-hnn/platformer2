@@ -93,6 +93,7 @@ func die():
 	
 	is_dying = true
 	animated_sprite_2d.play("die")
+	$death.play()
 	await move_payer_up_and_down()
 	Global.player_lives -= 1
 	
@@ -141,7 +142,7 @@ func fire_thong():
 	print("thong fired")
 	get_parent().add_child(thong)
 	$AnimatedSprite2D.play("thong_fire")
-	$AudioStreamPlayer2D.play()
+	$fire.play()
 	thong_fire_timer.start(0.25)
 
 func _on_interaction_body_entered(body):
@@ -150,3 +151,6 @@ func _on_interaction_body_entered(body):
 
 func _on_ThongFireTimer_timeout():
 	is_firing_thong = false
+
+func kill_sound():
+	$enemy.play()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crfeictt4p4wy"
+path="res://.godot/imported/VOCAL EVIL Impact Hit Slash 04.ogg-8ff2328d9901d43a9f88edd7b85ed293.oggvorbisstr"
+
+[deps]
+
+source_file="res://VOCAL EVIL Impact Hit Slash 04.ogg"
+dest_files=["res://.godot/imported/VOCAL EVIL Impact Hit Slash 04.ogg-8ff2328d9901d43a9f88edd7b85ed293.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
