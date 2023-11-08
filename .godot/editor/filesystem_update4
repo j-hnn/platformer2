@@ -10,9 +10,8 @@ res://beer.tscn
 res://hard_level.tscn
 res://thong_power_up.tscn
 res://thong.tscn
+res://win.tscn
+res://hard_level.gd
+res://win.gd
 res://player.gd
 res://world.gd
-res://big_toad.gd
-res://global.gd
-res://toad.gd
-res://thong.gd

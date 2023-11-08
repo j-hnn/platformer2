@@ -1,15 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjvfn0lec2p03"]
 
-[ext_resource type="Texture2D" uid="uid://wokbvu3xc61r" path="res://coin.png" id="1_n0yoj"]
+[ext_resource type="Texture2D" uid="uid://cv4jf5q56mwm7" path="res://image-removebg-preview (2).png" id="1_kltln"]
 [ext_resource type="Script" path="res://coin.gd" id="2_fwk5a"]
 [ext_resource type="AudioStream" uid="uid://cqf16sw3ry3nq" path="res://coin.mp3" id="3_101di"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aldpu"]
+radius = 113.636
+height = 590.909
 
 [node name="coin" type="Sprite2D"]
-position = Vector2(8, -9)
-scale = Vector2(0.46875, 0.53125)
-texture = ExtResource("1_n0yoj")
+position = Vector2(18, -6.5)
+scale = Vector2(0.056, 0.026)
+texture = ExtResource("1_kltln")
 script = ExtResource("2_fwk5a")
 
 [node name="interaction" type="Area2D" parent="."]

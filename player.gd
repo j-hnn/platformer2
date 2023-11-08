@@ -154,3 +154,6 @@ func _on_ThongFireTimer_timeout():
 
 func kill_sound():
 	$enemy.play()
+
+func _on_finish_body_entered(body):
+	get_tree().change_scene_to_file("res://win.tscn")

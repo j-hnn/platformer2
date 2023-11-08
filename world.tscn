@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbbqm7t4blhst"]
+[gd_scene load_steps=17 format=3 uid="uid://cbbqm7t4blhst"]
 
 [ext_resource type="PackedScene" uid="uid://cq3r182jkg4qc" path="res://player.tscn" id="1_kgsbw"]
 [ext_resource type="Script" path="res://world.gd" id="1_kpufw"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cjvfn0lec2p03" path="res://coin.tscn" id="6_blaet"]
 [ext_resource type="PackedScene" uid="uid://h8dlfq2h0ka7" path="res://coin_gui.tscn" id="8_bk00f"]
 [ext_resource type="PackedScene" uid="uid://pq020r8pih72" path="res://questionblock.tscn" id="10_qy6os"]
-[ext_resource type="AudioStream" uid="uid://7xue7t81yqgt" path="res://ALARM Alert Ringer Ascend 01.ogg" id="11_0km6v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jq5l"]
 texture = ExtResource("1_wghij")
@@ -164,10 +163,6 @@ position = Vector2(997, 456)
 
 [node name="questionblock3" parent="." instance=ExtResource("10_qy6os")]
 position = Vector2(128, 474)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_0km6v")
-volume_db = 1.0
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]

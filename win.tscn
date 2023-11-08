@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://1siy27tqrfh4"]
+
+[ext_resource type="Script" path="res://win.gd" id="1_4ht2c"]
+[ext_resource type="Texture2D" uid="uid://byn3irqvjbhuc" path="res://kisspng-morpheus-the-matrix-neo-red-pill-and-blue-pill-you-good-pills-will-play-5adf94a9d28840.9882904515246020258624.png" id="1_knwdy"]
+
+[node name="win" type="CanvasLayer"]
+script = ExtResource("1_4ht2c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -54.0
+offset_top = -34.0
+offset_right = 1152.0
+offset_bottom = 712.0
+color = Color(0, 0, 0, 1)
+
+[node name="Kisspng-morpheus-the-matrix-neo-red-pill-and-blue-pill-you-good-pills-will-play-5Adf94a9d28840_9882904515246020258624" type="Sprite2D" parent="."]
+position = Vector2(594, 246)
+texture = ExtResource("1_knwdy")
+
+[node name="play_again" type="Button" parent="."]
+offset_left = 122.0
+offset_top = 411.0
+offset_right = 416.0
+offset_bottom = 665.0
+text = "Play Again"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 726.0
+offset_top = 400.0
+offset_right = 1063.0
+offset_bottom = 649.0
+text = "Quit"
+
+[connection signal="pressed" from="play_again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

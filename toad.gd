@@ -5,7 +5,7 @@ const SPEED = 25.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_alive = true
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var timer = $Timer
+
 
 func _ready():
 	add_to_group("Enemy")

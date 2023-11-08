@@ -1,5 +1,4 @@
-extends CanvasLayer
-
+extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,10 +9,12 @@ func _ready():
 func _process(delta):
 	pass
 
+func _on_interaction_body_entered(body):
+	if body.is_in_group("Player"):
+		body.die()
 
-func _on_start_pressed():
-	get_tree().change_scene_to_file("res://world.tscn")
 
 
-func _on_quit_pressed():
-	get_tree().quit()
+func _on_transition_body_entered(body):
+	if body.is_in_group("Player"):
+		get_tree().change_scene_to_file("res://win.tscn")
