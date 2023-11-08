@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bow26ftlgows0"]
+[gd_scene load_steps=20 format=3 uid="uid://bow26ftlgows0"]
 
 [ext_resource type="Texture2D" uid="uid://b48jebbxw3m7y" path="res://lvl2-block.png" id="1_gihre"]
 [ext_resource type="Script" path="res://underworld.gd" id="1_ltby5"]
+[ext_resource type="Texture2D" uid="uid://dedhcntp56or7" path="res://IMG_4260-removebg-preview.png" id="2_aduhu"]
 [ext_resource type="Texture2D" uid="uid://tsg4jpk5a5yh" path="res://lvl2-brick.png" id="2_kdru8"]
 [ext_resource type="PackedScene" uid="uid://cq3r182jkg4qc" path="res://player.tscn" id="3_mevuq"]
 [ext_resource type="Texture2D" uid="uid://dyuaxtew4c8ld" path="res://flagpole.png" id="4_qugrs"]
@@ -53,6 +54,11 @@ radius = 14.3178
 
 [node name="underworld" type="Node2D"]
 script = ExtResource("1_ltby5")
+
+[node name="Img4260-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(578.125, 425)
+scale = Vector2(2.66189, 1.05283)
+texture = ExtResource("2_aduhu")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7rbkj")
